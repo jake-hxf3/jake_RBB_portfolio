@@ -1,5 +1,5 @@
 # Project Name
-![insert alt text](images/example.jpg)
+![insert alt text](images/blue-red-field.jpg)
 
 My portfolio shall be filled with red, black, and blue. My conscience, turned inside out for the world to see.
 
