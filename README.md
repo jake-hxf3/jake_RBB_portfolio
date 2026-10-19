@@ -6,7 +6,7 @@ My portfolio shall be filled with red, black, and blue. My conscience, turned in
 ## Installation 💻
 No installation required, simply download the zip file and extract.
 ## Usage
-Open index.html in the browser of your choice and see the website.
+Open index.html in your browser and decide if you like me or not.
 
 ## Contributing 
 1. Fork it!
