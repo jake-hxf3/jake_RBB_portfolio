@@ -1,7 +1,7 @@
 # Project Name
 ![insert alt text](images/example.jpg)
 
-This is a project about [insert topic].
+My portfolio shall be filled with red, black, and blue. My conscience, turned inside out for the world to see.
 
 ## Installation 💻
 No installation required, simply download the zip file and extract.
