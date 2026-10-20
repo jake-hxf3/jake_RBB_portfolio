@@ -1,0 +1,15 @@
+@use '../abstracts';
+
+body {
+    background-color: abstracts.$black;
+    padding: 25px;
+}
+
+h1 {
+    color: abstracts.$red;
+    margin-block: 25px;
+}
+
+p {
+    color: abstracts.$blue;
+}
