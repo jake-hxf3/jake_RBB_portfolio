@@ -1,0 +1,13 @@
+@use 'abstracts';
+
+body {
+    background-color: abstracts.$black;
+}
+
+h1 {
+    color: abstracts.$red;
+}
+
+p {
+    color: abstracts.$blue;
+}
