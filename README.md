@@ -3,7 +3,7 @@
 
 My portfolio shall be filled with red, black, and blue. My conscience, turned inside out for the world to see.
 
-## Installation 💻
+## Installation
 No installation required, simply download the zip file and extract.
 ## Usage
 Open index.html in your browser and decide if you like me or not.
