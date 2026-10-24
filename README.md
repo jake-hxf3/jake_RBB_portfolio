@@ -1,7 +1,7 @@
 # Portfolio Site of Jake RS
 ![insert alt text](images/blue-red-field.jpg)
 
-My portfolio shall be filled with red, black, and blue. My conscience, turned inside out for the world to see.
+This project is about my personal portfolio, which I will project my skills and preferences to this world of design in order to test my likeability.
 
 ## Installation
 No installation required, simply download the zip file and extract.
