@@ -1,0 +1,21 @@
+@use '../abstracts' as A;
+
+[class*="button"] {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background-color: A.$red;
+    transition: 0.15s all cubic-bezier(.7,.68,.22,1.0);
+}
+
+a[class*="button"] {
+    color: white;
+}
+
+.button-1 {
+    background-color: A.$blue;
+
+    &:hover {
+        background-color: darken(A.$blue, 25%);
+    }
+}

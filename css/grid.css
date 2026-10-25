@@ -68,6 +68,7 @@ body, p, h1, h2, h3, h4, h5 {
  }
 
  .subgrid-con {
+   display: grid;
    grid-template-columns: subgrid;
  }
 
