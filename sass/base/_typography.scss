@@ -1,5 +1,9 @@
 @use '../abstracts' as A;
 
+html {
+    font-size: max(2vw, 16px);
+}
+
 body {
     font-family: A.$main-font;
     color: white;

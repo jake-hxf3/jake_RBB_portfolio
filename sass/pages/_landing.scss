@@ -23,3 +23,8 @@ body {
     aspect-ratio: 792/425;
 }
 
+@media screen and (min-width: 768px) {
+    .rift-3 {
+        order: -1;
+    }
+}
