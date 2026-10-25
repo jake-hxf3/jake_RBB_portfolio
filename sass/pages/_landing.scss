@@ -42,9 +42,37 @@ header{
     }
 }
 
-section.project {
+.project {
     background-color: A.$black;
-    height: 100vh;
+
+    .grid-con {
+        align-items: center;
+    }
+}
+
+.project-img {
+    height: 100%;
+    overflow: hidden;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+}
+
+.project-text {
+    h3 {
+        font-size: 3.75rem;
+        line-height: 2.85rem;
+        font-weight: 450;
+        color: A.$red;
+    }
+
+    h3+p {
+        margin-top: 1rem;
+        line-height: 2rem;
+        font-style: italic;
+    }
 }
 
 @media screen and (min-width: 768px) {
