@@ -13,6 +13,7 @@ h3 {
 }
 
 a {
+    transition: 0.15s all cubic-bezier(.7,.68,.22,1.0);
     text-decoration: none;
     color: A.$red;
 }
