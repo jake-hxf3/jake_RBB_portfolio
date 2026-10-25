@@ -1,5 +1,5 @@
 # Portfolio Site of Jake RS
-![insert alt text](images/jacob-text_3.svg)
+![insert alt text](images/jacob-text-3.svg)
 
 This project is about my personal portfolio, which I will project my skills and preferences to this world of design in order to test my likeability.
 
