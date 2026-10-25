@@ -1,0 +1,284 @@
+:root {
+  font-size: clamp(12px, 2vw, 18px);
+}
+
+.custom-video {
+    margin-block: 1rem;
+    position: relative;
+    /* allow the video to expland to full screen and stack properly */
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-video video::cue {
+  background-color: red;
+}
+
+
+.video-controls {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0.25rem 1rem 0.5rem;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,1));
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.video-controls.hide {
+  animation: stay 3s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+  pointer-events: none;
+}
+
+@keyframes stay {
+  0% {opacity: 1;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
+
+.video-controls button {
+    padding: 0;
+    border: 0;
+    position: relative;
+    background-color: transparent;
+
+    +button {
+      margin-left: 10px;
+    }
+}
+
+.video-controls button:focus-visible, .video-range:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 1px;
+}
+
+.player-icon {
+    color: red;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: 0.2s color linear;
+}
+
+.player-icon:hover {
+  color: #ff6868;
+}
+
+.stop {
+  display: none;
+  margin-right: 1rem;
+}
+
+.volume {
+  margin-left: auto;
+  margin-right: 10px;
+  display: flex;
+}
+
+.volume:hover .vol {
+  margin-right: 10px;
+}
+
+.caption {
+  display: none;
+}
+
+
+.videotext {
+  color: white;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 0.95rem;
+}
+
+
+
+.video-range {
+  display: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Removes default focus */
+.video-range:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+.video-range::-webkit-slider-runnable-track {
+  background-color: #187bec;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+.video-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  background-color: red;
+  transition: 0.2s all linear;
+}
+
+
+
+.video-range::-webkit-slider-thumb:hover {
+  background-color: #f93f3f;
+}
+
+.video-range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid white;
+  outline-offset: 0.125rem;
+} 
+
+
+.seeking {
+  width: 100%;
+  padding-inline: 15px;  
+  display: flex;
+  align-items: center;
+}
+
+
+#change-vol {
+  display: none;
+  width: 0;
+  visibility: 0;
+}
+
+
+#timeseek {
+  width: 100%;
+}
+ .seeking:has(+.volume:hover) #timeseek {
+    display: none;
+  }
+
+#change-vol::-webkit-slider-thumb {
+  margin-top: -4px; /* Centers thumb on the track */
+  border-radius: 0.2rem;
+  height: 1.25rem;
+  width: 1rem;
+}
+
+
+#timeseek::-webkit-slider-thumb {
+  border: #8fc3fe 3px solid;
+  margin-top: -6px;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+#timeseek:not(:hover)::-webkit-slider-thumb {
+  border: #8fc3fe 3px solid;
+  background-color: transparent;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+.video-range::-moz-range-track {
+  background-color: #187bec;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+.video-range::-moz-range-thumb {
+  background-color: red;
+  border: none; /*Removes extra border that FF applies*/
+}
+
+.video-range::-moz-range-thumb:hover {
+  transition: 0.2s all linear;
+  background-color: #f93f3f;
+}
+
+.video-range:focus::-moz-range-thumb{
+  outline: 2px solid white;
+  outline-offset: 0.125rem;
+}
+
+#change-vol::-moz-range-thumb {
+  border-radius: 0.2rem;
+  height: 1.25rem;
+  width: 1rem;
+}
+
+#timeseek::-moz-range-thumb {
+  border: #8fc3fe 3px solid;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+#timeseek:not(:hover)::-moz-range-thumb {
+  border: #8fc3fe 3px solid;
+  background-color: transparent;
+}
+
+
+@keyframes expand {
+  0% {width: 0;}
+  75% {width: 7rem;}
+  100% {width: 7rem;}
+}
+
+@media screen and (min-width: 768px) {
+.player-icon{
+  margin-left: 1.25rem;
+}
+
+.stop {
+  display: block;
+}
+
+#change-vol::-webkit-slider-thumb {
+  margin-top: -0.325rem;
+}
+
+#timeseek::-webkit-slider-thumb {
+  margin-top: -0.5rem;
+}
+
+.seeking:has(+.volume:hover) #timeseek {
+  display: unset;
+}
+}
+
+@media screen and (min-width: 380px) {
+  .video-controls {
+    padding: 1.25rem;
+  }
+
+  .volume:hover #change-vol {
+    display: block;
+    animation: expand 0.5s 0.1s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+  }
+
+  .video-range {
+    display: inline-block;
+  }
+
+  .caption {
+    display: block;
+  }
+}
+
+
+@media screen and (min-width: 240px) {
+  .video-controls {
+    display: flex;
+  }
+}
+
+@media (pointer:none), (pointer:coarse) {
+  .video-controls button:focus-visible{
+    outline: none;
+  }
+}
