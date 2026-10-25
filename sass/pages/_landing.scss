@@ -16,7 +16,7 @@ header{
 .rift-3 {
     background-image: url(../images/3-stroke.svg);
     background-repeat: no-repeat;
-    height: 70vh;
+    aspect-ratio: 1/1;
 }
 
 .title-3 {
@@ -69,7 +69,7 @@ header{
     }
 
     h3+p {
-        margin-top: 1rem;
+        margin-block: 1rem;
         line-height: 2rem;
         font-style: italic;
     }
