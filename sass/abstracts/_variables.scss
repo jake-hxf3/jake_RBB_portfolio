@@ -4,4 +4,7 @@ $red: #f30023;
 $blue: #4030f3;
 $black: #000003;
 $bg-blue: #0f0f33;
+$bg-red: #230000;
+$fg-blue: lighten($blue, 10%);
+$fg-red: lighten($red, 10%);
 $main-font: "Georama", Helvetica, sans-serif;

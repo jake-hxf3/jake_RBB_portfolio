@@ -8,18 +8,61 @@
     <title>Document</title>
 </head>
     <body>
-       <h1 class="hidden">Jake Russell's Portfolio</h1>
+       <h1 class="hidden">Jacob Russell's Portfolio</h1>
         <header> 
             <div id="main-header" class="grid-con">
-                <nav id="main-nav" class="col-span-full m-col-start-7 m-col-end-13 box">
+                <button class="col-start-4 col-end-5" id="menu-btn" aria-label="Toggle header menu">MENU</button>
+                <nav id="main-nav" class="col-span-full m-col-start-7 m-col-end-13">
                     <h2 class="hidden">Main Navigation</h2>      
-                    <ul id="burger-con" class="collapsible flexlist">
-                        <li><a href="#">LANDING</a></li>
+                    <p id="nav-inst" class="hidden">Click elsewhere to exit</p>
+                    <ul id="navlink-con" class="collapsible flexlist">
+                        <li><a href="#">PROJECTS</a></li>
                         <li><a href="#">ABOUT_ME</a></li>
                         <li><a href="#">CONTACT_ME</a></li>
                     </ul>
                 </nav>                    
             </div>
         </header>
+
+        <main>
+            <section id="hero" class="grid-con">
+                <h2 class="hidden">Greetings</h2>
+                <p class="hidden">It's Jacob Russell</p>
+                <div class="title-3 col-span-full m-col-start-5 m-col-end-13"></div>
+                <div class="rift-3 col-span-full m-col-start-1 m-col-end-5"></div>
+                <p class="col-span-full m-col-start-5 m-col-end-13">Front-end developer with a vendetta against the blank canvas.<br>I have made it my life purpose to rid the world of them.</p>
+            </section>
+
+            <div id="main-bg">
+                <section id="project-title">
+                    <h2>PROJECTS</h2>
+                </section>
+
+                <div id="project-1" class="project">
+                    <div class="grid-con">
+                        <div class="project-img col-span-full m-col-start-1 m-col-end-8">
+                            <img src="images/squeezit-proj-poster.jpg" alt="Poster for the Squeezit project">
+                        </div>
+                        <section class="project-text col-span-full m-col-start-8 m-col-end-13 subgrid-con">
+                            <h3 class="col-span-full">Squeezit<br>Street Juice</h3>  
+                            <p class="col-span-full">Fanshawe College<br>Second Term Project<br>Cutout Solutions<br>Wave Experiment</p>
+                            <a href="#" class="col-span-3 button-1">View Details</a>
+                        </section>                        
+                    </div>
+
+                    
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h2 class="hidden">Main Footer</h2>
+            <div class="grid-con">
+                <p id="footer-contact-info" class="col-span-full m-col-start-4 m-col-end-10">2026 Jacob Russell<br>Fanshawe College<br>jacobrs@gmail.com</p>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+        <script src="js/video.js"></script>
     </body>
 </html>

@@ -1,6 +1,77 @@
-@use '../abstracts';
+@use '../abstracts' as A;
 
 body {
-    background-color: abstracts.$bg-blue;
-    padding: 25px;
+    background-color: A.$bg-blue;
+}
+
+#hero {
+    margin-top: 32px;
+}
+
+.rift-3 {
+    background-image: url(../images/3-stroke.svg);
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+}
+
+.title-3 {
+    background-image: url(../images/jacob-text-3.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    aspect-ratio: 792/425;
+}
+
+#main-bg {
+    background-image: linear-gradient(A.$bg-blue, A.$red);
+}
+
+#project-title {
+    height: 150vh;
+    display: grid;
+    place-items: center;
+
+    h2 {
+        font-weight: 300;
+        font-size: 3rem;
+    }
+}
+
+.project {
+    background-color: A.$black;
+
+    .grid-con {
+        align-items: center;
+    }
+}
+
+.project-img {
+    height: 100%;
+    overflow: hidden;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+}
+
+.project-text {
+    h3 {
+        font-size: 3.75rem;
+        line-height: 2.85rem;
+        font-weight: 450;
+        color: A.$red;
+    }
+
+    h3+p {
+        margin-block: 1rem;
+        line-height: 2rem;
+        font-style: italic;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .rift-3 {
+        order: -1;
+    }
 }
