@@ -1,26 +1,27 @@
 @use '../abstracts' as A;
 
 %unhinged {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    text-align: center;
-    background-color: A.$bg-red;
+    @media screen and (max-width: 768px) {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        text-align: center;
+        background-color: A.$bg-red;
+        cursor: pointer;
 
-    ul, ol {
-        height: 50%;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 2rem;        
+        ul, ol {
+            height: 50%;
+            font-size: 2rem;        
+        }
     }
 
 }
 
 nav {
     @extend %fight-or-flight;
-    
+
     &:not(:has(.collapsible)) {
         @extend %unhinged;
     }
@@ -34,6 +35,8 @@ nav {
 
     ul, ol {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -58,5 +61,19 @@ nav {
 @media screen and (min-width: 768px) {
     #menu-btn {
         display: none;
+    }
+
+    nav {
+        margin: 25px;
+
+        ul, ol {
+            flex-direction: row;
+        }
+
+        &:has(.collapsible) {
+            pointer-events: all;
+            visibility: visible;
+            transform: translateY(0);
+        }
     }
 }
