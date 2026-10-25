@@ -1,3 +1,7 @@
+header{
+    padding-inline: 25px;
+}
+
 nav ul, nav ol {
     display: flex;
     justify-content: space-between;
@@ -12,5 +16,16 @@ nav ul, nav ol {
     li a {
         text-decoration: none;
         color: inherit;
+    }
+}
+
+#menu-btn {
+    display: block;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    #menu-btn {
+        display: none;
     }
 }

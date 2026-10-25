@@ -1,15 +1,28 @@
 @use '../abstracts' as A;
 
-[class*="button"] {
+%button-reset {
     display: block;
     padding: 15px;
     text-align: center;
+    color: white;
     background-color: A.$red;
+    border: none;
     transition: 0.15s all cubic-bezier(.7,.68,.22,1.0);
+    cursor: pointer;
 }
 
-a[class*="button"] {
-    color: white;
+[class*="button"] {
+    @extend %button-reset;
+}
+
+button {
+    @extend %button-reset;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
 }
 
 .button-1 {
@@ -19,3 +32,4 @@ a[class*="button"] {
         background-color: darken(A.$blue, 25%);
     }
 }
+
