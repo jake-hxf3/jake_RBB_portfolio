@@ -1,8 +1,12 @@
-@use '../abstracts';
+@use '../abstracts' as A;
 
 body {
-    background-color: abstracts.$bg-blue;
-    padding: 25px;
+    background-color: A.$bg-blue;
+    padding-block: 25px;
+}
+
+header{
+    padding-inline: 25px;
 }
 
 #hero {
@@ -21,6 +25,26 @@ body {
     background-repeat: no-repeat;
     background-position-x: right;
     aspect-ratio: 792/425;
+}
+
+#main-bg {
+    background-image: linear-gradient(A.$bg-blue, A.$red);
+}
+
+#project-title {
+    height: 150vh;
+    display: grid;
+    place-items: center;
+
+    h2 {
+        font-weight: 300;
+        font-size: 3rem;
+    }
+}
+
+section.project {
+    background-color: A.$black;
+    height: 100vh;
 }
 
 @media screen and (min-width: 768px) {
