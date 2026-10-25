@@ -4,3 +4,22 @@ body {
     background-color: abstracts.$bg-blue;
     padding: 25px;
 }
+
+#hero {
+    margin-top: 32px;
+}
+
+.rift-3 {
+    background-image: url(../images/3-stroke.svg);
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.title-3 {
+    background-image: url(../images/jacob-text-3.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    aspect-ratio: 792/425;
+}
+

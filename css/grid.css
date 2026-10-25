@@ -45,6 +45,10 @@ body, p, h1, h2, h3, h4, h5 {
   aspect-ratio: 16/9;
 }
 
+.svg-placeholder {
+   background-color: #eee;
+}
+
 .box {
    background-color: #5b0000;
    color: #00c3ff;
@@ -54,13 +58,6 @@ body, p, h1, h2, h3, h4, h5 {
    margin-bottom:10px;
  }
 
-
- .full-width-grid-con {
-   /* set this container as a grid, with 3 columns
-   the other grid will sit in the middle column, this allows for overlapping content */
-   display: grid; 
-	grid-template-columns: 1fr minmax(0, 1200px) 1fr;  
-}
 
 /* ---Mobile Library Grid Styles--- */
 
@@ -74,11 +71,20 @@ body, p, h1, h2, h3, h4, h5 {
    grid-template-columns: subgrid;
  }
 
+.full-width-grid-con {
+   display: grid; 
+	grid-template-columns: 1fr minmax(0, 1200px) 1fr;  
+}
+
  .center-grid-con {
    margin: 0 auto;
    max-width: 1200px;
    padding-left: 15px;
    padding-right: 15px;
+}
+
+.row-overlap {
+   grid-row: 1/-1;
 }
 
 .col-span-1	{grid-column: span 1;}
